@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/param6_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/param6/param6_{{ version }}.tar.gz
-  sha256: 623daadab85ce5d3afb954921495c015eb1cae184856aaf179b2c708bf0a94fa
+  sha256: e7742006e41bae470c89c7a3eafb345ddf65ac6b1cde74c39691acd4a016f76d
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -47,8 +47,7 @@ test:
 about:
   home: https://xoopR.github.io/param6/, https://github.com/xoopR/param6/
   license: MIT
-  summary: By making use of 'set6', alongside the S3 and R6 paradigms, this package provides
-    a fast and lightweight R6 interface for parameters and parameter sets.
+  summary: By making use of 'set6', alongside the S3 and R6 paradigms, this package provides a fast and lightweight R6 interface for parameters and parameter sets.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
