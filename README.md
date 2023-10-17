@@ -3,11 +3,13 @@ About r-param6-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-param6-feedstock/blob/main/LICENSE.txt)
 
-Home: https://xoopR.github.io/param6/, https://github.com/xoopR/param6/
+Home: https://xoopR.github.io/param6/
 
 Package license: MIT
 
 Summary: By making use of 'set6', alongside the S3 and R6 paradigms, this package provides a fast and lightweight R6 interface for parameters and parameter sets.
+
+Development: https://github.com/xoopR/param6/
 
 Current build status
 ====================
