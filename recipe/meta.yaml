@@ -7,14 +7,12 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url:
-    - {{ cran_mirror }}/src/contrib/param6_{{ version }}.tar.gz
-    - {{ cran_mirror }}/src/contrib/Archive/param6/param6_{{ version }}.tar.gz
-  sha256: 4d06afac7b9c228a0706c8af098853f001e68b3b754dc5005e7a7f700c159940
+  url: https://raphaels1.r-universe.dev/src/contrib/param6_{{ version }}.tar.gz
+  md5: 998e61c7ed70a74ed7e7590f3ad9561f
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -26,17 +24,17 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-r6
     - r-checkmate
     - r-data.table
     - r-dictionar6 >=0.1.2
+    - r-r6
     - r-set6 >=0.2.3
   run:
     - r-base
-    - r-r6
     - r-checkmate
     - r-data.table
     - r-dictionar6 >=0.1.2
+    - r-r6
     - r-set6 >=0.2.3
 
 test:
@@ -45,7 +43,8 @@ test:
     - "\"%R%\" -e \"library('param6')\""  # [win]
 
 about:
-  home: https://xoopR.github.io/param6/, https://github.com/xoopR/param6/
+  home: https://xoopR.github.io/param6/
+  dev_url: https://github.com/xoopR/param6/
   license: MIT
   summary: By making use of 'set6', alongside the S3 and R6 paradigms, this package provides a fast and lightweight R6 interface for parameters and parameter sets.
   license_family: MIT
